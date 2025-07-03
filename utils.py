@@ -1,3 +1,11 @@
+import re
+
+def ints(s: str) -> list[int]:
+    return list(map(int, re.findall(r"-?\d+", s)))
+
+def ints_positives(s: str) -> list[int]:
+    return list(map(int, re.findall(r"\d+", s)))
+
 def two_sum(nums, target):
     cache = set()
     
