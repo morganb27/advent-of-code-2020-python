@@ -48,6 +48,10 @@ DIRS_4 = [
 def mul(list):
     return reduce(operator.mul, list, 1)
 
+def extract_words(s, words):
+    pattern = r"\b(" + "|".join(re.escape(w) for w in words) + r")\b"
+    return re.findall(pattern, s)
+
 def ints(s: str) -> list[int]:
     return list(map(int, re.findall(r"-?\d+", s)))
 
