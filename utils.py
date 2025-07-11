@@ -48,6 +48,13 @@ DIRS_4 = [
 def mul(list):
     return reduce(operator.mul, list, 1)
 
+
+def union_group(group): 
+    return set.union(*map(set, group.split("\n")))
+
+def intersection_group(group): 
+    return set.intersection(*map(set, group.split("\n")))
+
 def extract_words(s, words):
     pattern = r"\b(" + "|".join(re.escape(w) for w in words) + r")\b"
     return re.findall(pattern, s)
