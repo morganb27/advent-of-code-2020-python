@@ -3,6 +3,9 @@ from dataclasses import dataclass
 from functools import reduce
 import operator
 
+
+#re.findall(r"(\d+) (\w+) (\w+)"
+
 @dataclass(frozen=True)
 class Point:
     x: float
