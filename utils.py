@@ -5,6 +5,7 @@ import operator
 
 
 #re.findall(r"(\d+) (\w+) (\w+)"
+#[b - a for a, b in zip(p, p[1:])]
 
 @dataclass(frozen=True)
 class Point:
