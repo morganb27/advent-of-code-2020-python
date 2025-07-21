@@ -49,6 +49,19 @@ DIRS_4 = [
     Point(-1, 0),  # W 
 ]
 
+def rotate_right(x, y, times):
+    for _ in range(times):
+        x, y = y, -x
+    return x, y
+
+
+DIRECTION = {
+    "N": lambda x, y, steps: Point(x, y + steps),
+    "S": lambda x, y, steps: Point(x, y - steps),
+    "E": lambda x, y, steps: Point(x + steps, y),
+    "W": lambda x, y, steps: Point(x - steps, y)
+}
+
 def mul(list):
     return reduce(operator.mul, list, 1)
 
